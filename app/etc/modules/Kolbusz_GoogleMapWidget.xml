@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Kolbusz_GoogleMapWidget>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kolbusz_GoogleMapWidget>
+    </modules>
+</config>

@@ -1,0 +1,50 @@
+<widgets>
+    <kolbusz_googlemapwidget type="kolbusz_googlemapwidget/googleMap">
+        <name>Google Map Widget</name>
+        <description type="desc">
+            Widget displays google map in block depends on address of store or address provided in configuration.
+        </description>
+        <parameters>
+            <api_key>
+                <required>1</required>
+                <visible>1</visible>
+                <value></value>
+                <label>API Key</label>
+                <type>text</type>
+                <description>API key is provided by Google API Console</description>
+            </api_key>
+            <mode>
+                <required>1</required>
+                <visible>1</visible>
+                <value>store_address</value>
+                <label>Mode</label>
+                <type>select</type>
+                <values>
+                    <store_address>
+                        <value>store_address</value>
+                        <label>Use address of store</label>
+                    </store_address>
+                    <custom_address>
+                        <value>custom_address</value>
+                        <label>Use custom address</label>
+                    </custom_address>
+                </values>
+            </mode>
+            <custom_address>
+                <required>1</required>
+                <visible>1</visible>
+                <depends><mode><value>custom_address</value></mode></depends>
+                <label>Custom address</label>
+                <value>Enter your custom address</value>
+                <type>text</type>
+            </custom_address>
+            <template>
+                <required>1</required>
+                <visible>0</visible>
+                <value>kolbusz/googlemap/googlemap.phtml</value>
+                <label>Template file</label>
+                <type>text</type>
+            </template>
+        </parameters>
+    </kolbusz_googlemapwidget>
+</widgets>

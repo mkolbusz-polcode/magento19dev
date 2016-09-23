@@ -1,0 +1,14 @@
+<config>
+    <modules>
+        <Kolbusz_GoogleMapWidget>
+            <version>0.1.0</version>
+        </Kolbusz_GoogleMapWidget>
+    </modules>
+    <global>
+        <blocks>
+            <kolbusz_googlemapwidget>
+                <class>Kolbusz_GoogleMapWidget_Block</class>
+            </kolbusz_googlemapwidget>
+        </blocks>
+    </global>
+</config>
