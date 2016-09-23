@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<layout>
+    <block type="nofrills_booklayout/template" name="root" template="simple-page/2col.phtml" output="toHtml">
+        <block type="nofrills_booklayout/template" name="additional_head" template="simple-page/head.phtml" />
+        <block type="nofrills_booklayout/template" name="sidebar">
+            <action method="setTemplate">
+                <template>simple-page/sidebar.phtml</template>
+            </action>
+        </block>
+        <block type="core/text_list" name="content" />
+        <block type="nofrills_booklayout/template" name="list">
+            <block type="core/text">
+                <action method="setText">
+                    <text>One</text>
+                </action>
+            </block>
+            <block type="core/text">
+                <action method="setText">
+                    <text>Two</text>
+                </action>
+            </block>
+            <block type="core/text">
+                <action method="setText">
+                    <text>Three</text>
+                </action>
+            </block>
+            <block type="core/text">
+                <action method="setText">
+                    <text>Four</text>
+                </action>
+            </block>
+        </block>
+    </block>
+</layout>

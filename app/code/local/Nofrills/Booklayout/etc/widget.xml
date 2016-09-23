@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<widgets>
+    <nofrolls_booklayout_youtube type="nofrills_booklayout/youtube">
+        <name>YouTube Example Widget</name>
+        <description type="desc">
+            This widget displays a YouTube video.
+        </description>
+        <parameters>
+            <video_id>
+                <required>1</required>
+                <visible>1</visible>
+                <value>Enter ID Here</value>
+                <label>Youtube Video ID</label>
+                <type>text</type> 
+            </video_id>
+            <template>
+                <required>1</required>
+                <visible>1</visible>
+                <value>youtube.phtml</value>
+                <label>Frontend Template</label>
+                <type>select</type>
+                <values>
+                    <as_video>
+                        <value>youtube/youtube.phtml</value>
+                        <label>Embed Video</label>
+                    </as_video>
+                    <as_video_link>
+                        <value>youtube/youtube_link.phtml</value>
+                        <label>Link Video</label>
+                    </as_video_link>
+                </values>
+            </template>
+        </parameters>
+        <supported_blocks>
+            <content_block>
+                <block_name>content</block_name>
+                <template>
+                    <video>as_video</video>
+                    <link>as_video_link</link>
+                </template>
+            </content_block>
+            <left_block>
+                <block_name>left</block_name>
+                <template>
+                    <video>as_video</video>
+                </template>
+            </left_block>
+        </supported_blocks>
+    </nofrolls_booklayout_youtube>
+</widgets>
