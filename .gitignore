@@ -74,3 +74,4 @@ skin/frontend/default/modern/
 skin/install/
 var/
 pear
+app/code/local/Mage/Core/Model/Layout.php
