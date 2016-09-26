@@ -1,0 +1,27 @@
+.navbar {
+    &.affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+      background-color: white;
+
+    .nav-primary{
+        li > ul {
+            border:none;
+            background: white;
+            > li:before {
+                font-family: 'FontAwesome';
+                content: '\f10c';
+                margin-right: 1em;
+            }
+            > li:hover::before {
+                content: '\f111';
+            }
+        }
+        a {
+          display: inline;
+        }
+    }
+}

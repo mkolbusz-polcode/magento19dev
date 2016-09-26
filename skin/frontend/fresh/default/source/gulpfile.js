@@ -14,10 +14,10 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
 
   sass: [
-      
+
   ],
   javascript: [
-    
+
   ]
 };
 
@@ -34,7 +34,7 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
     .pipe(gulp.dest('../css'));
 });
