@@ -32,6 +32,23 @@ and open the template in the editor.
                 <file>css/fresh.css</file>
             </action>
         </reference>
+
+        <reference name="header">
+            <action method="unsetChild"><name>store_language</name></action>
+            <action method="unsetChild"><name>top.links</name></action>
+            <action method="unsetChild"><name>welcome</name></action>
+
+        </reference>
+
+        <reference name="after_body_start">
+            <block type="page/html_header" name="storearea" template="page/html/topstorearea.phtml">
+                <block type="page/template_links" name="top.links" as="topLinks"/>
+                <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
+                <block type="page/html_welcome" name="welcome" as="welcome"/>
+            </block>
+        </reference>
+
+
         <reference name="before_body_end">
           <block type="core/text" name="cdn.bootstrap">
               <action method="setText">
