@@ -1,0 +1,36 @@
+#header-nav {
+    background-color: $color-black;
+    
+    .nav-primary {
+        > li {
+            &:hover {
+                background-color: $color-red;
+            }
+        }
+        
+
+        ul {
+            background-color: $color-black;
+        }
+
+        a {
+            color: $color-white;
+        }
+        
+        ul {
+            a:hover {
+                color: $color-red;
+            }
+        }
+
+    }
+   
+}
+
+ #header-search {
+    float: left;
+    
+    #search {
+        height: 30px;
+    }
+}
