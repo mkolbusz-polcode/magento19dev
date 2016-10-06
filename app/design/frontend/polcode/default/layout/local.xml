@@ -3,7 +3,19 @@
 <layout>
     <default>
         <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>css/pureliving.css</name></action>
+            <block type="core/text" name="google.font">
+                <action method="setText">
+                    <text><![CDATA[<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,600i&subset=latin-ext" rel="stylesheet">]]></text>
+                </action>
+            </block>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/pureliving.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/all.js</name>
+            </action>
         </reference>
         <reference name="header">
             <remove name="store_language" />

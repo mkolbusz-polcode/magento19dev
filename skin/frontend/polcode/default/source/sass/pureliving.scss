@@ -1,2 +1,9 @@
-@import "_colors.scss";
-@import "parts/_header.scss";
+@import "bootstrap";
+@import "colors.scss";
+
+@import "variables.scss";
+@import "global.scss";
+@import "parts/header.scss";
+@import "parts/homepage.scss";
+
+@import "modules/widget-new-products";

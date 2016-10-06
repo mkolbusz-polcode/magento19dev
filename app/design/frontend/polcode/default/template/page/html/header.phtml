@@ -27,7 +27,6 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-
 <!--<div class="header-language-background">
     <div class="header-language-container">
         <div class="store-language-container">
@@ -41,11 +40,36 @@
 </div>-->
 
 <header id="header" class="page-header">
-    <div class="page-header-container">
-        <a class="logo" href="<?php echo $this->getUrl('') ?>">
-            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
-            <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
-        </a>
+    <div class="page-header-container row">
+        <div class="col-sm-12 col-lg-6">
+            <a class="logo" href="<?php echo $this->getUrl('') ?>">
+                <img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+                <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
+            </a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <div class="row text-right" id="topAccountLinks">
+                <div class="col-lg-12">
+                    <?php echo $this->getChildHtml('topLinks') ?>
+                </div>
+            </div>
+            <div class="row" id="search-and-cart">
+                <div class="col-sm-12 col-lg-6 col-lg-offset-5">
+                    <!-- Search -->
+                    <div id="header-search" class="skip-content">
+                        <?php echo $this->getChildHtml('topSearch') ?>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="account-cart-wrapper">
+                                <!-- Cart -->
+                        <div class="header-minicart">
+                            <?php echo $this->getChildHtml('minicart_head'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
               // See app.js for details ?>
@@ -64,18 +88,7 @@
                 <span class="label"><?php echo $this->__('Search'); ?></span>
             </a>
 
-            <div class="account-cart-wrapper">
-                <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
-                    <span class="icon"></span>
-                    <span class="label"><?php echo $this->__('Account'); ?></span>
-                </a>
-
-                <!-- Cart -->
-
-                <div class="header-minicart">
-                    <?php echo $this->getChildHtml('minicart_head'); ?>
-                </div>
-            </div>
+            
 
         </div>
 
@@ -85,14 +98,7 @@
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
 
-        <!-- Search -->
-
-        <div id="header-search" class="skip-content">
-            <?php echo $this->getChildHtml('topSearch') ?>
-            
-            <a href="<?php echo $this->getUrl('onepage/checkout'); ?>">Checkout</a>
-            
-        </div>
+        
 
         <!-- Account -->
 
