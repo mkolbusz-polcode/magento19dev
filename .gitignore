@@ -71,6 +71,8 @@ skin/frontend/default/french/
 skin/frontend/default/german/
 skin/frontend/default/iphone/
 skin/frontend/default/modern/
+skin/frontend/**/node_modules
+skin/frontend/**/bower_components
 skin/install/
 skin/**/node_modules/**
 skin/**/bower_components/**

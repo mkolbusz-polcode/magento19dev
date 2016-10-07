@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Polcode_Bestsellers>
+            <version>1.0.0</version>
+        </Polcode_Bestsellers>
+    </modules>
+    <global>
+        <blocks>
+            <polcode_bestsellers>
+                <class>Polcode_Bestsellers_Block</class>
+            </polcode_bestsellers>
+        </blocks>
+    </global>
+</config>
