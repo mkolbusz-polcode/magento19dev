@@ -1,5 +1,4 @@
 <?php
-
 class Polcode_Bestsellers_Block_Bestsellers extends Mage_Core_Block_Template
 {
     public function getBestsellerProducts()

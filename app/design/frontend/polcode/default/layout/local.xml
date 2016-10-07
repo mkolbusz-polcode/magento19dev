@@ -22,4 +22,10 @@
             <remove name="welcome" />
         </reference>
     </default>
+    
+    <cms_index_index>
+        <reference name="content">
+            <block type="polcode_bestsellers/bestsellers" template="polcode/bestsellers.phtml" after="-" />
+        </reference>
+    </cms_index_index>
 </layout>
