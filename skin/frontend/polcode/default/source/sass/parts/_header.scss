@@ -3,7 +3,19 @@
     .logo {
         width: fit-content;
     }
-    
+    .links {
+        li {
+          border-right: 1px $brand-primary solid;  
+          &:last-of-type {
+              border: none;
+          }
+        }
+        a {
+            font-weight: bold;
+            color: $brand-primary;
+
+        }
+    } 
     
     #header-search {
         position: static;
@@ -20,7 +32,7 @@
         margin: 10px auto;
         li {
             display: inline-block;
-            margin-left: 10px;
+            padding: 0px 10px;
         }
     }
     
@@ -41,7 +53,7 @@
 
             a {
                 color: $color-white;
-                font-family: $font-family;
+                font-family: $font-family-base;
                 font-weight: bold;
             }
 

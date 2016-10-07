@@ -72,7 +72,7 @@ skin/frontend/default/german/
 skin/frontend/default/iphone/
 skin/frontend/default/modern/
 skin/install/
-skin/**/node_modules
-skin/**/bower_components
+skin/**/node_modules/**
+skin/**/bower_components/**
 var/
 pear
