@@ -1,0 +1,21 @@
+
+<div class="widget-best-selling">
+    <div class="text-center"><h3>Best Selling Products</h3></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+            <?php foreach ($this->getBestsellerProducts() as $product): ?>
+                <div class="item">
+                    <div class="text-center">
+                        <a href="<?php echo $product->getProductUrl() ?>"><img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($product, 'small_image')->resize(300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($product, 'small_image'), null, true) ?>" style="display:inline" border="0" /></a>
+                        <div class="product-description">
+                            <p><a href="<?php echo $product->getProductUrl() ?>"><?php echo $this->stripTags($product->getName(), null, true); ?></a></p>
+                            <p><?php echo Mage::helper('core')->currency($product->getPrice(), true, false) ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,5 +11,15 @@
                 <class>Polcode_Bestsellers_Block</class>
             </polcode_bestsellers>
         </blocks>
+        <models>
+            <polcode_bestsellers>
+                <class>Polcode_Bestsellers_Model</class>
+            </polcode_bestsellers>
+        </models>
+        <helpers>
+            <polcode_bestsellers>
+                <class>Polcode_Bestsellers_Helper</class>
+            </polcode_bestsellers>
+        </helpers>
     </global>
 </config>

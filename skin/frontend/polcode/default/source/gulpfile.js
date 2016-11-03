@@ -16,6 +16,8 @@ var jsFiles = [
     config.bowerDir + '/jquery/dist/jquery.min.js',
     './js/jquery-noconflict-open.js',
     config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    config.bowerDir + '/owl-carousel/owl-carousel/owl.carousel.min.js',
+    './js/best-selling-products-carousel.js',
     './js/jquery-noconflict-close.js',
 ]
 
@@ -29,8 +31,9 @@ gulp.task('sass', function () {
     .pipe(sass({
         style: 'compressed',
         includePaths: [
-            './resources/sass',
+//            './resources/sass',
             config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+            config.bowerDir + '/owl-carousel/owl-carousel'
         ]
     }).on('error', notify.onError(function(error){
         return "Error: " + error.message;

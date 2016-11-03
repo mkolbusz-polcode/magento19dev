@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <polcode_bestsellers_config translate="label" module="polcode_bestsellers">
+            <label>Polcode Extensions</label>
+            <sort_order>100</sort_order>
+        </polcode_bestsellers_config>
+    </tabs>
+<sections>
+        <polcode_bestsellers_options translate="label" module="polcode_bestsellers">
+            <label>Bestsellers Options</label>
+            <tab>polcode_bestsellers_config</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <polcode_bestsellers_group translate="label" module="polcode_bestsellers">
+                    <label>Bestsellers</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+ 
+                    <fields>
+                        <polcode_bestsellers_number translate="label">
+                            <label>Number of products: </label>
+                            <comment>Number of products to display as bestsellers</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </polcode_bestsellers_number>
+                    </fields>
+                </polcode_bestsellers_group>
+            </groups>
+        </polcode_bestsellers_options>
+    </sections>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <polcode_bestsellers_options>
+                                            <title>Polcode - All</title>
+                                        </polcode_bestsellers_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

@@ -15,7 +15,7 @@ class Polcode_Bestsellers_Block_Bestsellers extends Mage_Core_Block_Template
                 ->addPriceData()
                 ->addTaxPercents()
                 ->addUrlRewrite()
-                ->setPageSize(6);
+                ->setPageSize(10);
         
         $collection->getSelect()->joinLeft(
                 array('aggregation' => $collection->getResource()->getTable('sales/bestsellers_aggregated_monthly')),
